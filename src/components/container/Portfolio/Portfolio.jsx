@@ -4,11 +4,23 @@ import { workNavs } from "../../../Data";
 import { workImages } from "../../../Data";
 import { FiGithub, FiEye } from "react-icons/fi";
 import { motion } from "framer-motion";
+const Modal = React.lazy(() => import("../../common/modal/Modal"));
 
 const Portfolio = () => {
   const [tab, setTab] = useState({ name: "all" });
   const [works, setWorks] = useState([]);
   const [active, setActive] = useState(0);
+  const [modalContent, setModalContent] = useState();
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   useEffect(() => {
     if (tab.name === "all") {
@@ -72,7 +84,16 @@ const Portfolio = () => {
               >
                 {work.hasGit && (
                   <motion.a
-                    href='#'
+                    // href='#'
+                    onClick={() => {
+                      openModal();
+                      setModalContent(
+                        <>
+                          <h2>Modal Title {work.id}</h2>
+                          <p>Modal content goes here...</p>
+                        </>
+                      );
+                    }}
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 1.1] }}
                     transition={{ duration: 0.3 }}
@@ -95,6 +116,11 @@ const Portfolio = () => {
           );
         })}
       </motion.div>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        modalContent={modalContent}
+      />
     </div>
   );
 };
