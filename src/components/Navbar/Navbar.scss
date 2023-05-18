@@ -28,6 +28,13 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    text-decoration: none;
+    &:link {
+      color: black;
+    }
+    &:visited {
+      color: black;
+    }
   }
   .social_icons {
     display: flex;

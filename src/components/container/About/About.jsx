@@ -37,11 +37,10 @@ const About = () => {
         >
           <p>
             Experienced in building high-performance web applications, with over
-            2 years of hands-on experience. Proficient in server-side rendering,
-            static site generation, and dynamic routing. Skilled in implementing
-            responsive designs, optimizing website performance, and working with
-            APIs. Developed several complex web applications which achieved
-            increase in page speed, improve user engagement, and enhanced SEO]
+            2 years of hands-on experience. Proficient in Reactjs and Nextjs.
+            Developed several complex web applications and helped achieve an
+            increase in page speed, improve user engagement, and enhanced SEO, I
+            did some projects using Ruby on rails
           </p>
           {bios.map((bio) => {
             return (
@@ -55,8 +54,8 @@ const About = () => {
             );
           })}
           <motion.a
-            href='https://drive.google.com/uc?export=download&id=1qsiG0NEHSn_2aUo8wwSzphAX5y-8vgr0'
-            download=''
+            href={process.env.REACT_APP_RESUME}
+            target='_blank'
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >

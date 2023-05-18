@@ -52,9 +52,9 @@ const Navbar = () => {
       className={scroll ? "header active" : "header"}
     >
       <div className='Nav_container'>
-        <div className='logo'>
+        <a className='logo' href='#home'>
           <h3>YH</h3>
-        </div>
+        </a>
         <ul className='nav_links'>
           {navLinks.map((navlink, index) => {
             return (
