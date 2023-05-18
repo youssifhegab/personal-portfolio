@@ -15,8 +15,15 @@ import {
   TbBrandReactNative,
 } from "react-icons/tb";
 import work1 from "./assets/work1.png";
+import work11 from "./assets/work11.png";
+import work12 from "./assets/work12.png";
+import work13 from "./assets/work13.png";
 import work2 from "./assets/work2.png";
+import work21 from "./assets/work21.png";
+import work22 from "./assets/work22.png";
+import work23 from "./assets/work23.png";
 import work3 from "./assets/work3.jpeg";
+import work31 from "./assets/work31.jpeg";
 
 export const navLinks = ["home", "about", "skills", "portfolio", "contact"];
 
@@ -61,9 +68,9 @@ export const icons = [
   { id: 3, icon: <FaReact />, text: "React" },
   { id: 4, icon: <TbBrandNextjs />, text: "Nextjs" },
   { id: 5, icon: <TbBrandReactNative />, text: "React Native" },
-  { id: 4, icon: <SiGraphql />, text: "Graphql" },
-  { id: 6, icon: <TbBrandTailwind />, text: "Tailwind" },
-  { id: 7, icon: <SiReactquery />, text: "React query" },
+  { id: 6, icon: <SiGraphql />, text: "Graphql" },
+  { id: 7, icon: <TbBrandTailwind />, text: "Tailwind" },
+  { id: 8, icon: <SiReactquery />, text: "React query" },
 ];
 
 export const experiences = [
@@ -91,30 +98,41 @@ export const workImages = [
   {
     id: 1,
     img: work1,
-    name: "project 1",
+    name: "dashboard",
     category: "web",
-    hasGit: true,
-    hasView: true,
+    githubLink: "",
+    link: "",
+    workImages: [
+      { id: 1, image: work11 },
+      { id: 2, image: work12 },
+      { id: 3, image: work13 },
+    ],
   },
   {
     id: 2,
     img: work2,
-    name: "project 2",
+    name: "Storefront",
     category: "web",
-    hasGit: true,
-    hasView: true,
+    githubLink: "",
+    workImages: [
+      { id: 1, image: work21 },
+      { id: 2, image: work22 },
+      { id: 3, image: work23 },
+    ],
+    link: "https://www.orderfast.com/en/nolabakery",
   },
   {
     id: 3,
     img: work3,
-    name: "project 3",
+    name: "Storefront app",
     category: "app",
-    hasGit: true,
-    hasView: true,
+    githubLink: "",
+    workImages: [{ id: 1, image: work31 }],
+    link: "https://apps.apple.com/us/app/id6444801817",
   },
 ];
 
-export const workNavs = ["All", "Web", "App", "Design"];
+export const workNavs = ["All", "Web", "App"];
 
 export const contacts = [
   {

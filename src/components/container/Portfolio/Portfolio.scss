@@ -42,7 +42,7 @@
 .workImages {
   margin-top: 3rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
@@ -77,8 +77,9 @@
       gap: 1.5rem;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
 
-      a {
+      button {
         width: 40px;
         height: 40px;
         background: rgba(255, 255, 255, 0.25);
@@ -86,6 +87,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 50%;
+        border: none;
         svg {
           color: #fff;
           font-size: 1.5rem;

@@ -3,7 +3,9 @@ import "./Portfolio.scss";
 import { workNavs } from "../../../Data";
 import { workImages } from "../../../Data";
 import { FiGithub, FiEye } from "react-icons/fi";
+import { AiOutlineLink } from "react-icons/ai";
 import { motion } from "framer-motion";
+
 const Modal = React.lazy(() => import("../../common/modal/Modal"));
 
 const Portfolio = () => {
@@ -75,41 +77,44 @@ const Portfolio = () => {
         {works.map((work) => {
           return (
             <div className='workImage' key={work.id}>
-              <img src={work.img} alt='workImg' />
+              <img src={work.img} alt='workImg' loading='lazy' />
               <motion.div
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: [0, 1] }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className='hoverLayer'
               >
-                {work.hasGit && (
-                  <motion.a
-                    // href='#'
-                    onClick={() => {
-                      openModal();
-                      setModalContent(
-                        <>
-                          <h2>Modal Title {work.id}</h2>
-                          <p>Modal content goes here...</p>
-                        </>
-                      );
-                    }}
+                {!!work?.hasGit && (
+                  <motion.button
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 1.1] }}
                     transition={{ duration: 0.3 }}
                   >
                     <FiGithub />
-                  </motion.a>
+                  </motion.button>
                 )}
-                {work.hasView && (
-                  <motion.a
-                    href='#'
+                {work?.workImages?.length > 0 && (
+                  <motion.button
+                    onClick={() => {
+                      openModal();
+                      setModalContent(work);
+                    }}
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 1.1] }}
                     transition={{ duration: 0.3 }}
                   >
                     <FiEye />
-                  </motion.a>
+                  </motion.button>
+                )}
+                {!!work?.link && (
+                  <motion.button
+                    onClick={() => window.open(work.link, "_blank")}
+                    whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 1.1] }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <AiOutlineLink />
+                  </motion.button>
                 )}
               </motion.div>
             </div>
