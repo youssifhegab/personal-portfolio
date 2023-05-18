@@ -22,7 +22,15 @@ const Modal = ({ isOpen, onClose, modalContent }) => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 50, opacity: 0 }}
           >
-            <AiFillCloseCircle onClick={onClose} className='modal-close' />
+            <motion.button
+              onClick={onClose}
+              className='modal-close'
+              whileInView={{ scale: [0, 1] }}
+              whileHover={{ scale: [1, 1.1] }}
+              transition={{ duration: 0.3 }}
+            >
+              <AiFillCloseCircle />
+            </motion.button>
             <div className='carousel-container'>
               <Carousel
                 autoPlay

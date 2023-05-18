@@ -24,6 +24,7 @@ import work22 from "./assets/work22.png";
 import work23 from "./assets/work23.png";
 import work3 from "./assets/work3.jpeg";
 import work31 from "./assets/work31.jpeg";
+import work32 from "./assets/work32.jpeg";
 
 export const navLinks = ["home", "about", "skills", "portfolio", "contact"];
 
@@ -127,7 +128,10 @@ export const workImages = [
     name: "Storefront app",
     category: "app",
     githubLink: "",
-    workImages: [{ id: 1, image: work31 }],
+    workImages: [
+      { id: 1, image: work31 },
+      { id: 2, image: work32 },
+    ],
     link: "https://apps.apple.com/us/app/id6444801817",
   },
 ];

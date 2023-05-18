@@ -29,7 +29,7 @@ const Navbar = () => {
       opacity: 1,
       y: -30,
       transition: {
-        delay: 0.7,
+        delay: 0.2,
       },
     },
   };
