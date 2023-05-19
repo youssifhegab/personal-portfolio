@@ -56,7 +56,7 @@ const About = () => {
             );
           })}
           <motion.a
-            href={process.env.REACT_APP_RESUME}
+            href={import.meta.env.VITE_APP_RESUME}
             target='_blank'
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
