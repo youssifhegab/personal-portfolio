@@ -22,12 +22,13 @@ const Navbar = () => {
   };
   const navLinkVariants = {
     hidden: {
-      display: "none",
       opacity: 0,
+      height: 0,
     },
     visible: {
       opacity: 1,
       y: -30,
+      height: "100vh",
       transition: {
         delay: 0.2,
       },
@@ -85,6 +86,7 @@ const Navbar = () => {
 
         <motion.div
           variants={navLinkVariants}
+          initial='hidden'
           animate={toggle ? "visible" : "hidden"}
           className='menuX'
         >
