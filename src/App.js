@@ -1,12 +1,17 @@
 import React from "react";
 import "./App.css";
-import About from "./components/container/About/About";
-import Contact from "./components/container/Contact/Contact";
-import Footer from "./components/container/Footer/Footer";
 import Home from "./components/container/Home/Home";
-import Portfolio from "./components/container/Portfolio/Portfolio";
-import Skills from "./components/container/Skills/Skills";
 import Navbar from "./components/Navbar/Navbar";
+
+const About = React.lazy(() => import("./components/container/About/About"));
+const Contact = React.lazy(() =>
+  import("./components/container/Contact/Contact")
+);
+const Footer = React.lazy(() => import("./components/container/Footer/Footer"));
+const Portfolio = React.lazy(() =>
+  import("./components/container/Portfolio/Portfolio")
+);
+const Skills = React.lazy(() => import("./components/container/Skills/Skills"));
 
 const App = () => {
   return (
