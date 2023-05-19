@@ -27,7 +27,7 @@ const Home = () => {
       }}
     >
       <div className='profile'>
-        <img src={portfolio} alt='portfolio' />
+        <img src={portfolio} alt='portfolio' loading='lazy' />
       </div>
       <div className='profile_text'>
         <h3 className='name'>

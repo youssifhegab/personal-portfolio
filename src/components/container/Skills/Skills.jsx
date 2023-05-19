@@ -22,12 +22,14 @@ const Skills = () => {
         className='select'
       >
         <button
+          aria-label='change to skills'
           onClick={() => setActive(1)}
           className={active === 1 ? "active" : ""}
         >
           Skills
         </button>
         <button
+          aria-label='change to experiences'
           onClick={() => setActive(2)}
           className={active === 2 ? "active" : ""}
         >
@@ -44,7 +46,7 @@ const Skills = () => {
             return (
               <div key={icon.id} className='tools'>
                 {icon.icon}
-                <h4 className='item_name'>{icon.text}</h4>
+                <h3 className='item_name'>{icon.text}</h3>
               </div>
             );
           })}

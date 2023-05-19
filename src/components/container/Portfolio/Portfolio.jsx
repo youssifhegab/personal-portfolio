@@ -59,6 +59,7 @@ const Portfolio = () => {
         {workNavs.map((workNav, index) => {
           return (
             <button
+              aria-label='switch tabs'
               onClick={(e) => activeTab(e, index)}
               className={`${active === index ? "active" : ""}`}
               key={index}
@@ -78,7 +79,7 @@ const Portfolio = () => {
         {works.map((work) => {
           return (
             <div className='workImage' key={work.id}>
-              <img src={work.img} alt='workImg' />
+              <img src={work.img} alt='workImg' loading='lazy' />
               <motion.div
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: [0, 1] }}
@@ -87,6 +88,7 @@ const Portfolio = () => {
               >
                 {!!work?.hasGit && (
                   <motion.button
+                    aria-label='View github'
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 1.1] }}
                     transition={{ duration: 0.3 }}
@@ -96,6 +98,7 @@ const Portfolio = () => {
                 )}
                 {work?.workImages?.length > 0 && (
                   <motion.button
+                    aria-label='view more images'
                     onClick={() => {
                       openModal();
                       setCarouselImages(work.workImages);
@@ -109,6 +112,7 @@ const Portfolio = () => {
                 )}
                 {!!work?.link && (
                   <motion.button
+                    aria-label='view link'
                     onClick={() => window.open(work.link, "_blank")}
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 1.1] }}

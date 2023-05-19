@@ -78,12 +78,12 @@ const Navbar = () => {
             }}
           />
         </div>
-        <motion.div
+        <motion.ul
           className='closeMenu'
           variants={menuVariants}
           initial='hidden'
           animate={toggle ? "visible" : "hidden"}
-        ></motion.div>
+        ></motion.ul>
 
         <motion.div
           variants={navLinkVariants}

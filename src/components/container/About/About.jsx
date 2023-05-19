@@ -28,6 +28,7 @@ const About = () => {
             whileHover={{ y: -48, x: -55 }}
             transition={{ duration: 0.3 }}
             alt='profile picture'
+            loading='lazy'
           />
         </motion.div>
         <motion.div

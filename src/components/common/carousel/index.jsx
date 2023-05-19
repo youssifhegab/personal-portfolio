@@ -19,6 +19,7 @@ const CarouselComponent = ({ images }) => {
               src={image.image}
               alt={`portfolio ${image.id}`}
               className='carousel-image'
+              loading='lazy'
             />
           </div>
         ))}

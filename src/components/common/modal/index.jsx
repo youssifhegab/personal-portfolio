@@ -21,6 +21,7 @@ const Modal = ({ children, isOpen, onClose }) => {
             exit={{ y: 50, opacity: 0 }}
           >
             <motion.button
+              aria-label='close modal'
               onClick={onClose}
               className='modal-close'
               whileInView={{ scale: [0, 1] }}

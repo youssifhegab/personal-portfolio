@@ -66,6 +66,7 @@ const Contact = () => {
             <textarea name='message' placeholder='message'></textarea>
           </div>
           <motion.button
+            aria-label='Send email'
             disabled={state.submitting}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
