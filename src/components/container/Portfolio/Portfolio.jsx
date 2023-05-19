@@ -5,14 +5,15 @@ import { workImages } from "../../../Data";
 import { FiGithub, FiEye } from "react-icons/fi";
 import { AiOutlineLink } from "react-icons/ai";
 import { motion } from "framer-motion";
+import CarouselComponent from "../../common/carousel";
 
-const Modal = React.lazy(() => import("../../common/modal/Modal"));
+const Modal = React.lazy(() => import("../../common/modal"));
 
 const Portfolio = () => {
   const [tab, setTab] = useState({ name: "all" });
   const [works, setWorks] = useState([]);
   const [active, setActive] = useState(0);
-  const [modalContent, setModalContent] = useState();
+  const [carouselImages, setCarouselImages] = useState();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -77,7 +78,7 @@ const Portfolio = () => {
         {works.map((work) => {
           return (
             <div className='workImage' key={work.id}>
-              <img src={work.img} alt='workImg' loading='lazy' />
+              <img src={work.img} alt='workImg' />
               <motion.div
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: [0, 1] }}
@@ -97,7 +98,7 @@ const Portfolio = () => {
                   <motion.button
                     onClick={() => {
                       openModal();
-                      setModalContent(work);
+                      setCarouselImages(work.workImages);
                     }}
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 1.1] }}
@@ -121,11 +122,9 @@ const Portfolio = () => {
           );
         })}
       </motion.div>
-      <Modal
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        modalContent={modalContent}
-      />
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <CarouselComponent images={carouselImages} />
+      </Modal>
     </div>
   );
 };

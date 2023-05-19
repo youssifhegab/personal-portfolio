@@ -14,17 +14,17 @@ import {
   TbBrandTailwind,
   TbBrandReactNative,
 } from "react-icons/tb";
-import work1 from "./assets/work1.png";
-import work11 from "./assets/work11.png";
-import work12 from "./assets/work12.png";
-import work13 from "./assets/work13.png";
-import work2 from "./assets/work2.png";
-import work21 from "./assets/work21.png";
-import work22 from "./assets/work22.png";
-import work23 from "./assets/work23.png";
-import work3 from "./assets/work3.jpeg";
-import work31 from "./assets/work31.jpeg";
-import work32 from "./assets/work32.jpeg";
+import work1 from "./assets/work1.webp";
+import work11 from "./assets/work11.webp";
+import work12 from "./assets/work12.webp";
+import work13 from "./assets/work13.webp";
+import work2 from "./assets/work2.webp";
+import work21 from "./assets/work21.webp";
+import work22 from "./assets/work22.webp";
+import work23 from "./assets/work23.webp";
+import work3 from "./assets/work3.webp";
+import work31 from "./assets/work31.webp";
+import work32 from "./assets/work32.webp";
 
 export const navLinks = ["home", "about", "skills", "portfolio", "contact"];
 
