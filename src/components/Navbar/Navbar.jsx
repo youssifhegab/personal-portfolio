@@ -24,10 +24,11 @@ const Navbar = () => {
     hidden: {
       opacity: 0,
       height: 0,
+      y: -300,
     },
     visible: {
       opacity: 1,
-      y: -30,
+      y: 0,
       height: "100vh",
       transition: {
         delay: 0.2,
@@ -91,15 +92,17 @@ const Navbar = () => {
           className='menuX'
         >
           <HiX onClick={() => setToggle(false)} />
-          {navLinks.map((navlink, index) => {
-            return (
-              <li key={index}>
-                <a href={`#${navlink}`} onClick={() => setToggle(false)}>
-                  {navlink}
-                </a>
-              </li>
-            );
-          })}
+          <ul>
+            {navLinks.map((navlink, index) => {
+              return (
+                <li key={index}>
+                  <a href={`#${navlink}`} onClick={() => setToggle(false)}>
+                    {navlink}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </motion.div>
       </div>
     </motion.div>

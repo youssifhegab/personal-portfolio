@@ -112,19 +112,21 @@
       top: 2rem;
       right: 5rem;
     }
-    li {
-      list-style: none;
-      margin-top: 1rem;
+    ul {
+      li {
+        list-style: none;
+        margin-top: 1rem;
 
-      a {
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #fff;
-        font-size: 1.5rem;
-        opacity: 0.6;
-        transition: all 0.3s ease;
-        &:hover {
-          opacity: 1;
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #fff;
+          font-size: 1.5rem;
+          opacity: 0.6;
+          transition: all 0.3s ease;
+          &:hover {
+            opacity: 1;
+          }
         }
       }
     }
