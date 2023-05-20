@@ -24,13 +24,11 @@ const Navbar = () => {
   const navLinkVariants = {
     hidden: {
       opacity: 0,
-      height: 0,
-      y: -300,
+      y: 30,
     },
     visible: {
       opacity: 1,
-      y: 0,
-      height: "100vh",
+      y: -30,
       transition: {
         delay: 0.3,
       },
@@ -72,12 +70,13 @@ const Navbar = () => {
             return <div key={index}>{socialIcon}</div>;
           })}
         </div>
-        <div className='menu'>
-          <HiMenuAlt4
-            onClick={() => {
-              setToggle(true);
-            }}
-          />
+        <div
+          className='menu'
+          onClick={() => {
+            setToggle(true);
+          }}
+        >
+          <HiMenuAlt4 />
         </div>
         <motion.ul
           className='closeMenu'
