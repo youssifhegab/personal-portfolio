@@ -8,7 +8,9 @@ const Home = () => {
     animation: {
       y: [0, -15],
       transition: {
-        yoyo: Infinity,
+        yoyo: true,
+        repeat: Infinity,
+        repeatType: "reverse",
         duration: 2,
         delay: 1,
       },

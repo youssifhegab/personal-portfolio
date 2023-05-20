@@ -23,13 +23,7 @@ const About = () => {
           transition={{ duration: 1 }}
           className='about_left'
         >
-          <motion.img
-            src={portfolio}
-            whileHover={{ y: -48, x: -55 }}
-            transition={{ duration: 0.3 }}
-            alt='profile picture'
-            loading='lazy'
-          />
+          <img src={portfolio} alt='profile' loading='lazy' />
         </motion.div>
         <motion.div
           className='about_right'
@@ -37,24 +31,26 @@ const About = () => {
           whileInView={{ x: [250, 0], opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <p>
+          <h4>
             Experienced in building high-performance web applications, with over
             2 years of hands-on experience. Proficient in Reactjs and Nextjs.
             Developed several complex web applications and helped achieve an
             increase in page speed, improve user engagement, and enhanced SEO, I
             did some projects using Ruby on rails
-          </p>
-          {bios.map((bio) => {
-            return (
-              <div className='bio' key={bio.id}>
-                <span className='bioKey'>
-                  {bio.icon}
-                  {bio.key}
-                </span>
-                <span className='bioValue'>{bio.value}</span>
-              </div>
-            );
-          })}
+          </h4>
+          <div>
+            {bios.map((bio) => {
+              return (
+                <div className='bio' key={bio.id}>
+                  <span className='bioKey'>
+                    {bio.icon}
+                    {bio.key}
+                  </span>
+                  <span className='bioValue'>{bio.value}</span>
+                </div>
+              );
+            })}
+          </div>
           <motion.a
             href={import.meta.env.VITE_APP_RESUME}
             target='_blank'
