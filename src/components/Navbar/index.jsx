@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Navbar.scss";
+import "./styles.scss";
 import { motion } from "framer-motion";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { navLinks } from "../../Data";
