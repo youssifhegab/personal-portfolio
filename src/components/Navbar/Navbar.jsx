@@ -31,7 +31,7 @@ const Navbar = () => {
       y: 0,
       height: "100vh",
       transition: {
-        delay: 0.2,
+        delay: 0.3,
       },
     },
   };

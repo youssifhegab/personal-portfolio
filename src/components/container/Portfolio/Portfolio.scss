@@ -31,7 +31,6 @@
     text-transform: capitalize;
     cursor: pointer;
     border: none;
-    font-family: "Poppins";
 
     &.active {
       background: #8c12f0;
@@ -88,6 +87,7 @@
         align-items: center;
         border-radius: 50%;
         border: none;
+        cursor: pointer;
         svg {
           color: #fff;
           font-size: 1.5rem;
