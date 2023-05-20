@@ -25,10 +25,12 @@ const Navbar = () => {
     hidden: {
       opacity: 0,
       y: 30,
+      height: 0,
     },
     visible: {
       opacity: 1,
       y: -30,
+      height: "100vh",
       transition: {
         delay: 0.3,
       },
