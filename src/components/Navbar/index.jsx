@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { navLinks } from "../../Data";
 import { socialIcons } from "../../Data";
+
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
   const [toggle, setToggle] = useState(false);

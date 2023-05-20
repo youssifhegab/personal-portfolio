@@ -1,5 +1,5 @@
 import React from "react";
-import "./About.scss";
+import "./styles.scss";
 
 import { motion } from "framer-motion";
 import { bios } from "../../../Data";

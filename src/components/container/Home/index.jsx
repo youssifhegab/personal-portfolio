@@ -1,6 +1,6 @@
 import React from "react";
 import portfolio from "../../../assets/iamge.webp";
-import "./Home.scss";
+import "./styles.scss";
 import { motion } from "framer-motion";
 
 const Home = () => {

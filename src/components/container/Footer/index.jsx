@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.scss";
+import "./styles.scss";
 import { socialIcons } from "../../../Data";
 import { motion } from "framer-motion";
 

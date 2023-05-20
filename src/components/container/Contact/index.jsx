@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useForm } from "@formspree/react";
 
-import "./Contact.scss";
+import "./styles.scss";
 import { contacts } from "../../../Data";
 import { socialIcons } from "../../../Data";
 

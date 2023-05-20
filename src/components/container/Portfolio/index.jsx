@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Portfolio.scss";
+import "./styles.scss";
 import { workNavs } from "../../../Data";
 import { workImages } from "../../../Data";
 import { FiGithub, FiEye } from "react-icons/fi";
