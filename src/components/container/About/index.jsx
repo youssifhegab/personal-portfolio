@@ -32,11 +32,11 @@ const About = () => {
           transition={{ duration: 1 }}
         >
           <h4>
-            Experienced in building high-performance web applications, with over
-            2 years of hands-on experience. Proficient in Reactjs and Nextjs.
-            Developed several complex web applications and helped achieve an
-            increase in page speed, improve user engagement, and enhanced SEO, I
-            did some projects using Ruby on rails
+            Need a skilled developer to bring your website vision to life? With
+            over 2 years of hands-on experience as a frontend engineer/web
+            developer, I specialize in building high-performance web
+            applications using Reactjs, Nextjs and Ruby on rails. Let's make
+            your ideas a reality!
           </h4>
           <div>
             {bios.map((bio) => {
