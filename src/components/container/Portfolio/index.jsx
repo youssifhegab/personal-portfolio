@@ -41,6 +41,8 @@ const Portfolio = () => {
     setActive(index);
   };
 
+  console.log({ works });
+
   return (
     <div className='container' id='portfolio'>
       <motion.div
@@ -78,50 +80,53 @@ const Portfolio = () => {
       >
         {works.map((work) => {
           return (
-            <div className='workImage' key={work.id}>
-              <img src={work.img} alt='workImg' loading='lazy' />
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: [0, 1] }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className='hoverLayer'
-              >
-                {!!work?.hasGit && (
-                  <motion.button
-                    aria-label='View github'
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 1.1] }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <FiGithub />
-                  </motion.button>
-                )}
-                {work?.workImages?.length > 0 && (
-                  <motion.button
-                    aria-label='view more images'
-                    onClick={() => {
-                      openModal();
-                      setCarouselImages(work.workImages);
-                    }}
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 1.1] }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <FiEye />
-                  </motion.button>
-                )}
-                {!!work?.link && (
-                  <motion.button
-                    aria-label='view link'
-                    onClick={() => window.open(work.link, "_blank")}
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 1.1] }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <AiOutlineLink />
-                  </motion.button>
-                )}
-              </motion.div>
+            <div className='work' key={work.id}>
+              <div className='workImage'>
+                <img src={work.img} alt='workImg' loading='lazy' />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: [0, 1] }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className='hoverLayer'
+                >
+                  {!!work?.githubLink && (
+                    <motion.button
+                      aria-label='View github'
+                      whileInView={{ scale: [0, 1] }}
+                      whileHover={{ scale: [1, 1.1] }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <FiGithub />
+                    </motion.button>
+                  )}
+                  {work?.workImages?.length > 0 && (
+                    <motion.button
+                      aria-label='view more images'
+                      onClick={() => {
+                        openModal();
+                        setCarouselImages(work.workImages);
+                      }}
+                      whileInView={{ scale: [0, 1] }}
+                      whileHover={{ scale: [1, 1.1] }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <FiEye />
+                    </motion.button>
+                  )}
+                  {!!work?.link && (
+                    <motion.button
+                      aria-label='view link'
+                      onClick={() => window.open(work.link, "_blank")}
+                      whileInView={{ scale: [0, 1] }}
+                      whileHover={{ scale: [1, 1.1] }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <AiOutlineLink />
+                    </motion.button>
+                  )}
+                </motion.div>
+              </div>
+              <h3>{work.name}</h3>
             </div>
           );
         })}

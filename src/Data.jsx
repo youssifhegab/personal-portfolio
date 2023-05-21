@@ -25,6 +25,7 @@ import work23 from "./assets/work23.webp";
 import work3 from "./assets/work3.webp";
 import work31 from "./assets/work31.webp";
 import work32 from "./assets/work32.webp";
+import rails from "./assets/rails.webp";
 
 export const navLinks = ["home", "about", "skills", "portfolio", "contact"];
 
@@ -95,11 +96,12 @@ export const finishes = [
     itemName: "Years Of Experience",
   },
 ];
+
 export const workImages = [
   {
     id: 1,
     img: work1,
-    name: "dashboard",
+    name: "Dashboard",
     category: "web",
     githubLink: "",
     link: "",
@@ -124,6 +126,15 @@ export const workImages = [
   },
   {
     id: 3,
+    img: rails,
+    name: "Blog posts",
+    category: "web",
+    githubLink: "https://github.com/youssifhegab/backend-blog-post",
+    workImages: [],
+    link: "",
+  },
+  {
+    id: 4,
     img: work3,
     name: "Storefront app",
     category: "app",
