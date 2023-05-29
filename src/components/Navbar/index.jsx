@@ -26,13 +26,16 @@ const Navbar = () => {
       opacity: 0,
       y: 30,
       height: 0,
+      zIndex: -10,
     },
     visible: {
       opacity: 1,
       y: -30,
+      zIndex: 30,
       height: "100vh",
       transition: {
         delay: 0.3,
+        type: "spring",
       },
     },
   };

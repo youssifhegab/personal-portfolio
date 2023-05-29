@@ -82,7 +82,12 @@ const Portfolio = () => {
           return (
             <div className='work' key={work.id}>
               <div className='workImage'>
-                <img src={work.img} alt='workImg' loading='lazy' />
+                <img
+                  src={work.img}
+                  alt='workImg'
+                  loading='lazy'
+                  style={{ objectFit: "contain" }}
+                />
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: [0, 1] }}

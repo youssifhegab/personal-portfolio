@@ -41,6 +41,7 @@ const Skills = () => {
         initial={{ opacity: 0 }}
         whileInView={{ y: [-50, 0], opacity: 1 }}
         className='skills'
+        transition={{ type: "spring" }}
       >
         {active === 1 &&
           icons.map((icon) => {
@@ -56,6 +57,7 @@ const Skills = () => {
         initial={{ opacity: 0 }}
         whileInView={{ y: [-50, 0], opacity: 1 }}
         className='experiencs'
+        transition={{ type: "spring" }}
       >
         {active === 2 && (
           <>
@@ -74,6 +76,7 @@ const Skills = () => {
               initial={{ opacity: 0 }}
               whileInView={{ y: [-50, 0], opacity: 1 }}
               className='finishes_container'
+              transition={{ type: "spring" }}
             >
               {finishes.map((finish) => {
                 return (
