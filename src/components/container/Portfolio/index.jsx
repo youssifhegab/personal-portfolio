@@ -86,7 +86,7 @@ const Portfolio = () => {
                   src={work.img}
                   alt='workImg'
                   loading='lazy'
-                  style={{ objectFit: "contain" }}
+                  style={{ objectFit: "contain", borderRadius: "12px" }}
                 />
                 <motion.div
                   initial={{ opacity: 0 }}
